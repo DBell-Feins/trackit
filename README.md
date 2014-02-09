@@ -12,7 +12,7 @@ TrackIt is a Django project designed to make daily weight tracking easy and fun.
 #### Profiles
 - A profile contains information that's important to the user.
 - A profile has demographic information
-    - Starting age
+    - Date of birth
     - Height
     - Starting weight
     
@@ -21,7 +21,7 @@ TrackIt is a Django project designed to make daily weight tracking easy and fun.
       - Start date
       - Target date
       - Start weight
-      - Target date
+      - Target weight
   - Manages a user's goal at any given time.
     
 #### WeighIns
