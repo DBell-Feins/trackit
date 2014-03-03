@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 class Goal(models.Model):
     class Meta:
-        app_label = 'common'
+        app_label = 'entry'
 
     start_date = models.DateField()
     end_date = models.DateField()
