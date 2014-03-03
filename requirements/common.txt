@@ -2,8 +2,21 @@ Django==1.6.2
 Pillow==2.3.0
 South==0.8.4
 argparse==1.2.1
-django-admin-tools==0.5.1
+defusedxml==0.4.1
+sqlparse==0.1.11
+wsgiref==0.1.2
+python-dateutil==2.2
+python-mimeparse==0.1.4
+six==1.5.2
+lxml==3.3.2
+shortuuid==0.4
+
+####
+# DJANGO PLUGINS
+####
+
+# django-admin-tools==0.5.1
+https://bitbucket.org/izi/django-admin-tools/downloads/django-admin-tools-0.5.1.tar.gz
 django-guardian==1.1.1
 django-reversion==1.8.0
-feedparser==5.1.3
-wsgiref==0.1.2
+django-tastypie==0.11.0
