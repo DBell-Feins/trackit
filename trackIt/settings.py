@@ -35,17 +35,19 @@ INSTALLED_APPS = (
     'admin_tools.theming',
     'admin_tools.menu',
     'admin_tools.dashboard',
-    'django.contrib.admin',
     'django.contrib.auth',
+    'django.contrib.admin',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'guardian',
+    'reversion',
+    'tastypie',
+    # Site apps
     'analyze',
     'common',
     'entry',
-    'reversion',
 )
 
 AUTHENTICATION_BACKENDS = (
@@ -108,4 +110,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 ANONYMOUS_USER_ID = -1
-AUTH_PROFILE_MODULE = 'common.UserProfile'
+APPEND_SLASH = False
+
+# Tastypie settings
+TASTYPIE_ALLOW_MISSING_SLASH = True
+TASTYPIE_DEFAULT_FORMATS = ['json', 'xml']
