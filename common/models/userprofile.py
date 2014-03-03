@@ -6,11 +6,17 @@ class UserProfile(models.Model):
     class Meta:
         app_label = 'common'
 
-    user = models.ForeignKey(User, unique=True)
+    GENDER_CHOICES = (
+        ('M', 'Male'),
+        ('F', 'Female')
+    )
+
+    user = models.OneToOneField(User)
     dob = models.DateField()
-    height = models.DecimalField(max_digits=4, decimal_places=2)
-    gender = models.CharField(max_length=140)
+    feet = models.IntegerField()
+    inches = models.IntegerField()
+    gender = models.CharField(max_length=1, choices=GENDER_CHOICES, null=False)
     profile_picture = models.ImageField(upload_to='thumbpath', blank=True)
 
     def __unicode__(self):
-        return u'Profile of user: %s' % self.user.username
+        return self.user.username
