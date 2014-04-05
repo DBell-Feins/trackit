@@ -1,5 +1,6 @@
 from django.conf.urls import patterns, include, url
-from common.api import UserResource, GoalResource, WeighInResource
+from common.api import UserResource, GoalResource, WeighInResource, \
+    CreateUserResource
 from tastypie.api import Api
 from django.contrib import admin
 admin.autodiscover()
@@ -8,6 +9,7 @@ v1_api = Api(api_name='v1')
 v1_api.register(UserResource())
 v1_api.register(GoalResource())
 v1_api.register(WeighInResource())
+v1_api.register(CreateUserResource())
 
 urlpatterns = patterns('',
     # Admin

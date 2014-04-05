@@ -21,7 +21,7 @@ SECRET_KEY = 'knvq_c5&5!q+6bgz^1-4#^_b^4rlxn56e7o^6i0%sg2s=^z!=e'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+DEBUG_PROPAGATE_EXCEPTIONS = True
 TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
@@ -36,6 +36,7 @@ INSTALLED_APPS = (
     'admin_tools.menu',
     'admin_tools.dashboard',
     'django.contrib.auth',
+    'registration',
     'django.contrib.admin',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -74,6 +75,13 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.messages.context_processors.messages',
     'django.core.context_processors.request',
 )
+
+TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR, 'common', 'templates'),
+    os.path.join(BASE_DIR, 'entry', 'template'),
+    os.path.join(BASE_DIR, 'templates'),
+)
+
 
 ROOT_URLCONF = 'trackIt.urls'
 
@@ -115,3 +123,5 @@ APPEND_SLASH = False
 # Tastypie settings
 TASTYPIE_ALLOW_MISSING_SLASH = True
 TASTYPIE_DEFAULT_FORMATS = ['json', 'xml']
+
+ACCOUNT_ACTIVATION_DAYS = 7
